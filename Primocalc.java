@@ -20,10 +20,14 @@ public class Primocalc {
             //Pity
                 System.out.println("How much pity are you at? (Please Enter Number Value)");
                 int PityA = ask.nextInt();
-
+            
+            //Constellation Amount
+                System.out.println("What constellation do you have? (Type -1 if you don't have the character)");
+                int OCL = ask.nextInt();
 
                 System.out.println("Which constellation do you wish to go for? (0, 1, 2, 3, 4, 5, 6)");
                 int CLN = ask.nextInt();
+                CLN -= OCL;
                 CharacterBanner(CLN, PAT, PityA);
         } else if (CBWB.equals("WB")){
             //Primogems Amount
@@ -37,9 +41,14 @@ public class Primocalc {
                 System.out.println("How much pity are you at? (Please Enter Number Value)");
                 int PityA = ask.nextInt();
 
+            //Constellation Amount
+                System.out.println("What refinement level do you have? (Type 0 if you don't have any)");
+                int OCL = ask.nextInt();
+
 
                 System.out.println("Which refinement level do you wish to go for? (1, 2, 3, 4, 5)");
                 int RLN = ask.nextInt();
+                RLN -= OCL;
                 WeaponBanner(RLN, PAT, PityA);
 
         }
@@ -50,21 +59,21 @@ public class Primocalc {
         System.out.println("Below Displays the Amount of PrimoGems and Intertwined Fates (All of the following are assuming that you go to hard pity (90 Pulls) for each 50/50): ");
         System.out.println();
 
-        int PAL = ((CV + 1) * (90 * 160)) - PA - Pity;
+        int PAL = ((CV) * (90 * 160)) - PA - Pity;
         int PALIF = (PAL / 160); 
         System.out.println("If you're lucky and win all of your 50/50: ");
         System.out.println(PAL + " Primogems");
         System.out.println(PALIF + " Intertwined Fates");
         System.out.println();
        
-        int PAS = ((CV + 1) * (135 * 160)) - PA - Pity;
+        int PAS = ((CV) * (135 * 160)) - PA - Pity;
         int PASIF = (PAS / 160);
         System.out.println("If you're luck is average where you win half of your 50/50: ");
         System.out.println(PAS + " Primogems");
         System.out.println(PASIF + " Intertwined Fates");
         System.out.println();
         
-        int PAU = ((CV + 1) * (180 * 160)) - PA - Pity;
+        int PAU = ((CV) * (180 * 160)) - PA - Pity;
         int PAUIF = (PAU / 160);
         System.out.println("If you're unlucky where you win none of your 50/50: ");
         System.out.println(PAU + " Primogems");
@@ -77,21 +86,21 @@ public class Primocalc {
         System.out.println("Below Dispalys the Amount of PrimoGems and Intertwined Fates (Assuming that you hit soft pity (75 Pulls) for each 50/50): ");
         System.out.println();
 
-        int PARL = ((CV +1) * (75 * 160)) - PA - Pity;
+        int PARL = ((CV) * (75 * 160)) - PA - Pity;
         int PARLIF = (PARL /160);
         System.out.println("If you're lucky and win all of your 50/50: ");
         System.out.println(PARL + " Primogems");
         System.out.println(PARLIF + " Intertwined Fates");
         System.out.println();
        
-        int PARS = ((CV +1) * (113 * 160)) - PA - Pity;
+        int PARS = ((CV) * (113 * 160)) - PA - Pity;
         int PARSIF = (PARS / 160);
         System.out.println("If you're luck is average where you win half of your 50/50: ");
         System.out.println(PARS + " Primogems");
         System.out.println(PARSIF + " Intertwined Fates");
         System.out.println();
        
-        int PARU = ((CV +1) * (150 *160)) - PA - Pity;
+        int PARU = ((CV) * (150 *160)) - PA - Pity;
         int PARUIF = (PARU / 160);
         System.out.println("If you're unlucky where you win none of your 50/50: ");
         System.out.println(PARU + " Primogems");
